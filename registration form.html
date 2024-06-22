@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration form</title>
+        <style>
+           body{
+           background-image:linear-gradient(to right,purple,blue);
+            }
+            table{
+                background-color: white;
+
+            }
+           
+        </style>
+         <script>
+            function myfun(event)
+            {
+                event.preventDefault();
+                var gender=document.querySelector('input[name="gen"]:checked').value;
+       
+        var a=document.getElementById("name").value;
+        var b=document.getElementById("user").value;
+        var c=document.getElementById("email").value;
+        var d=document.getElementById("phone").value;
+        var e=document.getElementById("password").value;
+        var f=document.getElementById("cp").value;
+        
+        document.writeln("",a);
+        document.writeln("<br>",b);
+        document.writeln("<br>",c);
+        document.writeln("<br>",d);
+        document.writeln("<br>",e);
+        document.writeln("<br>",f);
+        document.writeln("<br>",gender);
+        
+
+            }
+        </script>
+    </head>
+    <body>
+        <div id="div">
+            <form>
+                <h1 align="center">Registration Form </h1>
+                <table align="center" cellspacing="30cm" cellpadding="10cm">
+                    <tr>
+                        <td>Full name<br>
+                        <input type="text" id="name" placeholder="Enter your name"></td>
+                        <td>Username<br>
+                            <input type="text" id="user" placeholder="Enter your username">
+            </td>
+
+                    </tr>
+                    <tr>
+                        <td>Email <br>
+                        <input type="email" id="email" placeholder="Enter your email"></td>
+                        <td>
+                            Phone Number<br>
+                            <input type="number" id="phone" placeholder="Enter your mobile number">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Password<br>
+                            <input type="password" id="password" placeholder="Enter your pw">
+                        </td>
+                        <td>
+                            Confirm Password<br>
+                            <input type="password" id="cp" placeholder="Enter Confirm password">
+                        </td>
+                    </tr>
+                    <div id="radio">
+                    <tr>
+                        <td>Gender<br>
+                        <input type="radio" id="m" value="male" name="gen">
+                        <label for="m">Male</label>
+                        </td>
+                        <td><input type="radio" id="m" value="female" name="gen">
+                            <label for="m">Female</label>
+
+                        </td>
+                        <td><input type="radio" id="m" value="prefer not to say" name="gen" checked>
+                            <label for="m">Prefer not to say</label>
+
+                        </td>
+
+                    </tr>
+                    </div>
+                    <tr>
+                        
+                       <td align="center"> <input type="button" id="but" value="Register" onclick="myfun(event)"></td>
+                    </tr>
+                </table>
+
+            </form>
+        </div>
+       
+    </body>
+</html>
